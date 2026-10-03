@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darul-Hadeeth School Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="brand"><div class="logo">DH</div><div><b>DARUL-HADEETH</b><small>Li Dirasatil-Arabiyyah Wal-Islamiyyah</small></div></div>
+    <button class="menu" onclick="toggleSidebar()">☰</button>
+    <button class="logout" onclick="logout()">Logout</button>
+  </header>
+  <aside id="sidebar">
+    <div class="school-motto">العِلْمُ قَالَ اللهُ قَالَ رَسُولُهُ</div>
+    <button onclick="showPage('dashboard')">🏠 Dashboard</button>
+    <button onclick="showPage('students')">👨‍🎓 Students</button>
+    <button onclick="showPage('teachers')">👨‍🏫 Teachers</button>
+    <button onclick="showPage('classes')">🏫 Classes & Subjects</button>
+    <button onclick="showPage('results')">📊 Results</button>
+    <button onclick="showPage('attendance')">✓ Attendance</button>
+    <button onclick="showPage('announcements')">📢 Announcements</button>
+    <button onclick="showPage('settings')">⚙ Settings</button>
+  </aside>
+  <main id="main"></main>
+</div>
+
+<div id="login" class="login-screen">
+  <div class="login-card">
+    <div class="big-logo">DH</div>
+    <h1>Darul-Hadeeth</h1>
+    <p>School Management Portal</p>
+    <label>Login as</label>
+    <select id="role"><option>Administrator</option><option>Teacher</option><option>Student</option><option>Parent</option></select>
+    <label>Username</label><input id="username" placeholder="Enter username">
+    <label>Password</label><input id="password" type="password" placeholder="Enter password">
+    <button class="primary" onclick="login()">Login</button>
+    <div class="hint">Demo: any username/password works. Real online authentication will be connected in the next setup.</div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
